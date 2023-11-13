@@ -12,6 +12,7 @@ if(held)
  phy_linear_velocity_y = 0;
  phy_angular_velocity = 0;
  
+ 
  if(keyboard_check(ord("A")))
  {
 phy_rotation -= 3;	 
