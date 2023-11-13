@@ -1,2 +1,2 @@
 /// @description be consumed
-instance_destroy();
+//instance_destroy();

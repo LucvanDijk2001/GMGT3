@@ -1,5 +1,6 @@
 // @description move
 
+
 // X input check
 var hinput = keyboard_check(vk_right) - keyboard_check(vk_left);
 if hinput != 0 {
@@ -7,7 +8,7 @@ if hinput != 0 {
 	hspeed_ = clamp(hspeed_, -max_hspeed_, max_hspeed_);
 	//change momentum direction only when key is pressed
 } else {
-	hspeed_ = lerp(hspeed_, 0, .015);
+	hspeed_ += (0-hspeed_)/8;
 }
 
 if place_meeting(x+hspeed_, y, obj_wall){
@@ -36,4 +37,10 @@ if place_meeting(x, y+vspeed_, obj_wall){
 	vspeed_ = 0;
 }
 y += vspeed_;
+
+if(growth >= growth_threshold){
+	// grow a lim
+	growth -= growth_threshold;
+	growth_threshold += growth_threshold_increase;
+}
 

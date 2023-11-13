@@ -4,8 +4,8 @@
 global.SpocPack_camera_init = true;
 
 //camera properties
-global.SpocPack_camera_height = 135; //height of camera in pixels
-global.SpocPack_camera_width = 240; //width of camera in pixels
+global.SpocPack_camera_height = 280; //height of camera in pixels
+global.SpocPack_camera_width = 340; //width of camera in pixels
 global.SpocPack_camera_lerp_speed = 8; //lerp speed for camera
 
 global.SpocPack_camera_zoom = 1; //zoom of the camera
