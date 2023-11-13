@@ -71,6 +71,7 @@
     {"id":{"name":"obj_wall","path":"objects/obj_wall/obj_wall.yy",},},
     {"id":{"name":"spr_line","path":"sprites/spr_line/spr_line.yy",},},
     {"id":{"name":"seg_delete","path":"scripts/seg_delete/seg_delete.yy",},},
+    {"id":{"name":"o_playerlimb","path":"objects/o_playerlimb/o_playerlimb.yy",},},
     {"id":{"name":"arm_relocate","path":"scripts/arm_relocate/arm_relocate.yy",},},
     {"id":{"name":"seg_exists","path":"scripts/seg_exists/seg_exists.yy",},},
     {"id":{"name":"seg_meeting","path":"scripts/seg_meeting/seg_meeting.yy",},},

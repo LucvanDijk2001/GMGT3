@@ -50,6 +50,7 @@
     {"name":"obj_wall","order":3,"path":"objects/obj_wall/obj_wall.yy",},
     {"name":"spr_line","order":1,"path":"sprites/spr_line/spr_line.yy",},
     {"name":"seg_delete","order":3,"path":"scripts/seg_delete/seg_delete.yy",},
+    {"name":"o_playerlimb","order":4,"path":"objects/o_playerlimb/o_playerlimb.yy",},
     {"name":"arm_relocate","order":13,"path":"scripts/arm_relocate/arm_relocate.yy",},
     {"name":"seg_exists","order":5,"path":"scripts/seg_exists/seg_exists.yy",},
     {"name":"seg_meeting","order":8,"path":"scripts/seg_meeting/seg_meeting.yy",},
