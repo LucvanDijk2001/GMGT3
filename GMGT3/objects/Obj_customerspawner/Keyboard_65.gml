@@ -1,9 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-
-
-if(!global.MouseHoldsItem)
+if(!instance_exists(obj_textbox))
 {
-	held = true;
-	global.MouseHoldsItem = true;
+scr_create_dialogue_box("test");
 }

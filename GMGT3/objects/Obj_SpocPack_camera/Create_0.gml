@@ -4,7 +4,7 @@
 global.SpocPack_camera_init = true;
 
 //camera properties
-global.SpocPack_camera_height = 280; //height of camera in pixels
+global.SpocPack_camera_height = 340; //height of camera in pixels
 global.SpocPack_camera_width = 340; //width of camera in pixels
 global.SpocPack_camera_lerp_speed = 8; //lerp speed for camera
 
@@ -26,6 +26,8 @@ global.SpocPack_camera_x = global.SpocPack_camera_width/2;
 global.SpocPack_camera_y = global.SpocPack_camera_height/2;
 global.SpocPack_camera_zoom_to = global.SpocPack_camera_zoom;
 global.SpocPack_camera_rotation_to = global.SpocPack_camera_rotation; 
+
+global.MouseHoldsItem = false;
 
 //camera creation
 var vm = matrix_build_lookat(x,y,-10,x,y,0,0,1,0);

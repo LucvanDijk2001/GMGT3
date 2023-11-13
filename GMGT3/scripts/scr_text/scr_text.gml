@@ -10,10 +10,14 @@ function scr_text(_text){
 	if(argument_count > 1)
 	{
 		scr_dialogue_characters(argument[1]);
-	}
+	} else
 	if(argument_count > 2)
 	{
 		speaker_side[page_number] = argument[2];
+	}
+	else
+	{
+		snd[page_number] = snd_text_default_mid;
 	}
 	page_number++;
 }

@@ -115,6 +115,9 @@ function scr_game_text(_text_id){
 		
 		#endregion
 
+		case "test":
+			scr_text("holy shot, please give my lama sunglasses. He needs to get that moolah cash");
+		break;
 	}
 	
 }

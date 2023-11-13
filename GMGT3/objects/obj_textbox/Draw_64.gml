@@ -182,8 +182,8 @@ if(speaker_sprite[page] != noone)
 		_speaker_x 	+= sprite_width;
 	}
 	//draw speaker
-	scr_GUI_box_9slice_manual(textbox_x + portrait_x_offset[page],textbox_y,sprite_width,sprite_height,txtb_spr[page],txtb_9slice_left[page],txtb_9slice_right[page],txtb_9slice_top[page],txtb_9slice_bottom[page],textbox_img);
-	scr_GUI_image_ext(sprite_index, image_index,_speaker_x,textbox_y,speaker_side[page],1);
+	//scr_GUI_box_9slice_manual(textbox_x + portrait_x_offset[page],textbox_y,sprite_width,sprite_height,txtb_spr[page],txtb_9slice_left[page],txtb_9slice_right[page],txtb_9slice_top[page],txtb_9slice_bottom[page],textbox_img);
+	//scr_GUI_image_ext(sprite_index, image_index,_speaker_x,textbox_y,speaker_side[page],1);
 }
 
 //draw 9slice
