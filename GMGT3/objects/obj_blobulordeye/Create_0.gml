@@ -11,10 +11,10 @@ irislen = random_range(irislenmin,irislenmax);
 irisdir = random(360);
 irischangetimer = random_range(irischangetimemin,irischangetimemax);
 
-irisxto = 0;
-irisyto = 0;
-irisx = 0;
-irisy = 0;
+irisxto = x;
+irisyto = y;
+irisx = x;
+irisy = y;
 
 veladd = 0.002;
 velmax = 0.15;
