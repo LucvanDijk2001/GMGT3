@@ -1,0 +1,2 @@
+//variables
+rotation = 0;
