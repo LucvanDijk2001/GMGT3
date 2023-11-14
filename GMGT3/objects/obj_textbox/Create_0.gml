@@ -58,3 +58,5 @@ manually_completable = true; //if this is false it means the dialogue can only b
 run_start_action = true;
 start_action = noone;
 end_action = noone;
+
+lifetime = 60*5;

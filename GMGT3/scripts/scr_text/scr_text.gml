@@ -24,7 +24,19 @@ function scr_text(_text){
 		break;
 		
 		case 1:
-		snd[page_number] = snd_text_default_low;
+		snd[page_number] = snd_text_abysc;
+		break;
+		
+		case 2:
+		snd[page_number] = snd_text_ghost;
+		break;
+		
+		case 3:
+		snd[page_number] = snd_text_demon;
+		break;
+		
+		case 4:
+		snd[page_number] = snd_text_skelly;
 		break;
 		}
 		

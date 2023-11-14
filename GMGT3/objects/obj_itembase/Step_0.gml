@@ -4,6 +4,7 @@ if(mouse_check_button_released(mb_left))
 {
 	if(held)
 	{
+		scl = 1;
 		global.MouseHoldsItem = false;
 		held = false;	
 		
@@ -35,7 +36,20 @@ if(mouse_check_button_released(mb_left))
 			deco.image_angle = phy_rotation*-1;
 			deco.x = x;
 			deco.y = y;
-
+			if(flipped)
+			{
+			deco.flipped = true;
+			deco.image_xscale *= -1;
+			}
+			var cre = instance_nearest(x,y,obj_creaturebase);
+			cre.demonic += demonic;
+			cre.abyssal += abyssal;
+			cre.void += void;
+			cre.badass += badass;
+			cre.creepy += creepy;
+			cre.mutant += mutant;
+			array_push(cre.decos,deco);
+			cre.addDeco(deco);
 			instance_destroy();
 		}
 	}
@@ -44,7 +58,7 @@ if(mouse_check_button_released(mb_left))
 
 if(held)
 {
-	
+scl = 1.2;
  phy_position_x = mouse_x;
  phy_position_y = mouse_y;
  phy_linear_velocity_x = 0;
