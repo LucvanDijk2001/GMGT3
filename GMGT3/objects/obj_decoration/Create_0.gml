@@ -1,9 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
-parent = instance_nearest(x,y,obj_creaturebase);
+paren = noone;
 flipped = false;
-offx = parent.x-x;
-offy = parent.y-y;
+offx = 0;
+offy = 0;
 rot = 0;
 depth-=global.placeDepth;
 global.placeDepth++;

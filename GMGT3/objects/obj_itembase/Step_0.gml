@@ -17,6 +17,7 @@ if(mouse_check_button_released(mb_left))
 		//show_error("throwspeed " + string(throwdir),true);
 		
 		var collided = false;
+		var ctype = "creature"
 		var ccheck = instance_create_layer(x,y,layer,obj_collisionchecker);
 		ccheck.direction = phy_rotation;
 		ccheck.sprite_index = sprite_index;
@@ -26,11 +27,25 @@ if(mouse_check_button_released(mb_left))
 			{
 				collided = true;
 			}
+			if(place_meeting(x,y,obj_decoration))
+			{
+			    collided = true;	
+				ctype = "decor"
+			}
 			instance_destroy();
 		}
 
 		if(collided)
 		{
+			var cre;
+			if(ctype == "creature")
+			{
+			var cre = instance_nearest(x,y,obj_creaturebase);
+			}
+			else if (ctype == "decor")
+			{
+			var cre = instance_nearest(x,y,obj_decoration).paren;
+			}
 			var deco = instance_create_layer(x,y,"decolayer",obj_decoration);
 			deco.sprite_index = sprite_index;
 			deco.image_angle = phy_rotation*-1;
@@ -41,7 +56,11 @@ if(mouse_check_button_released(mb_left))
 			deco.flipped = true;
 			deco.image_xscale *= -1;
 			}
-			var cre = instance_nearest(x,y,obj_creaturebase);
+			deco.paren = self;
+			
+			deco.paren = cre;
+			deco.offx = deco.paren.x-x;
+            deco.offy = deco.paren.y-y;
 			cre.demonic += demonic;
 			cre.abyssal += abyssal;
 			cre.void += void;
