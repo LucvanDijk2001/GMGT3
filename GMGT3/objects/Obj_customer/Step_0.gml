@@ -6,9 +6,8 @@ if(move)
  if(moveTimer <= 0)
  {
   move = false;	 
-  moveTimer = 250;
-  var textbox = instance_find(obj_textbox,0);
-	textbox.external_flip = true;
+  moveTimer = 350*global.spawnmult;
+  
  }
 }
 

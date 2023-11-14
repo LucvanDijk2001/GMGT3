@@ -4,13 +4,25 @@ customerTimer--;
 
 if(customerTimer <= 0)
 {
-	customerTimer = customerTime;	
-	
+	if(instance_exists(obj_textbox))
+	{
+		with(obj_textbox)
+		{
+			instance_destroy();	
+		}
+	}
+	customerTimer = customerTime*global.spawnmult;	
+	global.spawnmult -= 0.01;
+	global.spawnmult = clamp(global.spawnmult,0.3,1);
+	global.SpocPack_dialogue_default_text_speed = global.starttextspeed * (2-global.spawnmult)
 	scr_check_dialogue_init();
 	
 	with(instance_create_layer(0,0,"Instances",obj_textbox))
 	{
-		global.speaksound = irandom(1);
+		var c1 = irandom(4);
+		global.speaksound = c1;
+		Obj_customer.move = true;
+		Obj_customer.image_index = c1;
 		textbox_img = 0;
 		
 		var animals;
@@ -19,31 +31,80 @@ if(customerTimer <= 0)
 		animals[2] = "GOAT";
 		
 		var types;
-		types[0] = "COOL";
-		types[1] = "SCARY";
-		types[2] = "DASHING";
-		types[3] = "CUTE";
+		types[0] = "DEMONIC";
+		types[1] = "ABYSSAL";
+		types[2] = "VOID";
+		types[3] = "BADASS";
+		types[4] = "CREEPY";
+		types[5] = "MUTANT";
 		
 		var r1 = irandom(2);
-		var r2 = irandom(3);
+		var r2 = irandom(5);
+		
+		var c = c_yellow;
+		var cs = c_yellow;
+		
+		switch(r2)
+		{
+			case 0: c = c_red; cs = c_maroon; break;
+			case 1: c = c_aqua; cs = c_purple; break;
+			case 2: c = c_dkgray; cs = c_black; break;
+			case 3: c = c_orange; cs = c_red; break;
+			case 4: c = c_silver; cs = c_dkgray; break;
+			case 5: c = c_lime; cs = c_green; break;
+		}
+		
 		var w1 = animals[r1];
 		var w2 = types[r2];
 		var w1l = string_length(w1);
 		var w2l = string_length(w2);
 		
-		var w1s = 26;
-		var w2s = w1s+w1l+60;//71
 		scr_set_completable(false);
-		scr_text("holy shot, please give my "+w1+" sunglasses. He needs to get that moolah cash. make him look " + w2 + "!");
+		var w1s;
+		var w2s;
+		
+		switch(irandom(4))
+		{
+		 case 0:
+			var w1s = 11;
+			var w2s = w1s+w1l+73;//71
+			scr_text("Here is my "+w1+". It looks too regular, please apply some Globulord magic to make it look " + w2 + "!");
+		 break;
+		 
+		 case 1:
+			var w1s = 8;
+			var w2s = w1s+w1l+21;//71
+			scr_text("UGH! MY "+w1+" needs to be way more "+w2+"! Go fix it for me Globulord!");
+		 break;
+		 
+		 case 2:
+			var w1s = 20;
+			var w2s = w1s+w1l+25;//71
+			scr_text("I HATE the way this "+w1+" looks! he doesn't fit my "+w2+" vibe at all! Globulord fixes?");
+		 break;
+		 
+		 case 3:
+			var w1s = 31;
+			var w2s = w1s+w1l+34;//71
+			scr_text("Help me oh great Globulord! My "+w1+" needs to be revamped to look more "+w2+"!");
+		 break;
+		 
+		 case 4:
+			var w1s = 41;
+			var w2s = w1s+w1l+7;//71
+			scr_text("I ****** LOVE GLOBULORD! **** CAN ****** "+w1+"! ***** "+w2+"! I LOOOOOVE GLOB!");
+		 break;
+		}
 		scr_text_color(w1s,w1s+w1l,c_yellow,c_yellow,c_yellow,c_yellow);
 		scr_text_wave(w1s,w1s+w1l,8,1);
 		scr_text_shadow(w1s,w1s+w1l,c_orange,0.5,0.5);
-		scr_text_color(w2s,w2s+w2l,c_yellow,c_yellow,c_yellow,c_yellow);
+		scr_text_color(w2s,w2s+w2l,c,c,c,c);
 		scr_text_wave(w2s,w2s+w2l,8,1);
-		scr_text_shadow(w2s,w2s+w2l,c_orange,0.5,0.5);
+		scr_text_shadow(w2s,w2s+w2l,cs,0.5,0.5);
 		
 		var creature = instance_create_layer(x,y,"Instances_5",obj_creaturebase);
 		creature.image_index = r1; 
-		Obj_customer.move = true;
+		creature.passtype = r2;
+		
 	}
 }

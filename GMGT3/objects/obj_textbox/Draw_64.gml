@@ -13,6 +13,12 @@ line_width = textbox_width-border*2;
 
 #endregion
 
+lifetime--;
+if(lifetime <= 0)
+{
+	external_flip = true;
+}
+
 //================================================SETUP============================//
 #region SETUP
 

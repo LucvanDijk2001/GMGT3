@@ -6,3 +6,15 @@ pmy = 0;
 held = false;
 connected = false;
 parent = noone;
+flipped = false;
+scl = 1;
+hover = false;
+
+demonic = random(1);
+abyssal = random(1);
+void = random(1);
+badass = random(1);
+creepy = random(1);
+mutant = random(1);
+
+outline_init()
