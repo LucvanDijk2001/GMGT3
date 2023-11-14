@@ -7,7 +7,7 @@ grab_accel = 2;
 
 hand_is_grab = 0;
 
-arm_initialize(180, 3, spr_limb);
+arm_initialize(195, 3, spr_limb);
 arm_pin(pinx, piny);
 
 if x < 170 {

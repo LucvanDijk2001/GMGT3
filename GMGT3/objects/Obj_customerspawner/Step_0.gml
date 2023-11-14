@@ -10,16 +10,13 @@ if(customerTimer <= 0)
 	
 	with(instance_create_layer(0,0,"Instances",obj_textbox))
 	{
+		global.speaksound = irandom(1);
 		textbox_img = 0;
 		
 		var animals;
-		animals[0] = "DOG";
-		animals[1] = "DUCK";
-		animals[2] = "CAMEL";
-		animals[3] = "GOAT";
-		animals[4] = "HORSE";
-		animals[5] = "FISH";
-		animals[6] = "LLAMA"
+		animals[0] = "DUCK";
+		animals[1] = "CAMEL";
+		animals[2] = "GOAT";
 		
 		var types;
 		types[0] = "COOL";
@@ -27,8 +24,10 @@ if(customerTimer <= 0)
 		types[2] = "DASHING";
 		types[3] = "CUTE";
 		
-		var w1 = animals[irandom(6)];
-		var w2 = types[irandom(3)];
+		var r1 = irandom(2);
+		var r2 = irandom(3);
+		var w1 = animals[r1];
+		var w2 = types[r2];
 		var w1l = string_length(w1);
 		var w2l = string_length(w2);
 		
@@ -43,7 +42,8 @@ if(customerTimer <= 0)
 		scr_text_wave(w2s,w2s+w2l,8,1);
 		scr_text_shadow(w2s,w2s+w2l,c_orange,0.5,0.5);
 		
-		instance_create_layer(x,y,"Instances_5",obj_creaturebase);
+		var creature = instance_create_layer(x,y,"Instances_5",obj_creaturebase);
+		creature.image_index = r1; 
 		Obj_customer.move = true;
 	}
 }

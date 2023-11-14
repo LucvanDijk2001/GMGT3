@@ -66,7 +66,7 @@
   "isEcma": false,
   "LibraryEmitters": [],
   "MetaData": {
-    "IDEVersion": "2023.8.1.102",
+    "IDEVersion": "2023.2.1.75",
   },
   "resources": [
     {"id":{"name":"scr_GUI_draw_text_ext_transformed","path":"scripts/scr_GUI_draw_text_ext_transformed/scr_GUI_draw_text_ext_transformed.yy",},},
@@ -168,6 +168,7 @@
     {"id":{"name":"scr_set_camera_rotation","path":"scripts/scr_set_camera_rotation/scr_set_camera_rotation.yy",},},
     {"id":{"name":"scr_set_camera_position_to","path":"scripts/scr_set_camera_position_to/scr_set_camera_position_to.yy",},},
     {"id":{"name":"scr_switch_menu","path":"scripts/scr_switch_menu/scr_switch_menu.yy",},},
+    {"id":{"name":"obj_dropzone","path":"objects/obj_dropzone/obj_dropzone.yy",},},
     {"id":{"name":"snd_text_default_low","path":"sounds/snd_text_default_low/snd_text_default_low.yy",},},
     {"id":{"name":"obj_example_set_camera_zoom","path":"objects/obj_example_set_camera_zoom/obj_example_set_camera_zoom.yy",},},
     {"id":{"name":"spr_textbox_default3","path":"sprites/spr_textbox_default3/spr_textbox_default3.yy",},},
@@ -200,6 +201,7 @@
     {"id":{"name":"arm_meeting_line","path":"scripts/arm_meeting_line/arm_meeting_line.yy",},},
     {"id":{"name":"arm_move_dir","path":"scripts/arm_move_dir/arm_move_dir.yy",},},
     {"id":{"name":"Obj_customerspawner","path":"objects/Obj_customerspawner/Obj_customerspawner.yy",},},
+    {"id":{"name":"snd_text_default_bop","path":"sounds/snd_text_default_bop/snd_text_default_bop.yy",},},
     {"id":{"name":"obj_playercore","path":"objects/obj_playercore/obj_playercore.yy",},},
     {"id":{"name":"seg_apply_force","path":"scripts/seg_apply_force/seg_apply_force.yy",},},
     {"id":{"name":"arm_move_towards","path":"scripts/arm_move_towards/arm_move_towards.yy",},},
@@ -275,13 +277,14 @@
     {"id":{"name":"obj_collisionchecker","path":"objects/obj_collisionchecker/obj_collisionchecker.yy",},},
     {"id":{"name":"seg_exists","path":"scripts/seg_exists/seg_exists.yy",},},
     {"id":{"name":"seg_meeting","path":"scripts/seg_meeting/seg_meeting.yy",},},
+    {"id":{"name":"spr_dropzone","path":"sprites/spr_dropzone/spr_dropzone.yy",},},
     {"id":{"name":"seg_draw","path":"scripts/seg_draw/seg_draw.yy",},},
     {"id":{"name":"arm_meeting_mask","path":"scripts/arm_meeting_mask/arm_meeting_mask.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
   ],
   "RoomOrderNodes": [
-    {"roomId":{"name":"R_playertest_abe","path":"rooms/R_playertest_abe/R_playertest_abe.yy",},},
     {"roomId":{"name":"R_playertest_luc","path":"rooms/R_playertest_luc/R_playertest_luc.yy",},},
+    {"roomId":{"name":"R_playertest_abe","path":"rooms/R_playertest_abe/R_playertest_abe.yy",},},
     {"roomId":{"name":"R_playertest","path":"rooms/R_playertest/R_playertest.yy",},},
     {"roomId":{"name":"R_Intro","path":"rooms/R_Intro/R_Intro.yy",},},
     {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
@@ -293,7 +296,6 @@
     {"roomId":{"name":"Room_high_res_camera_ui","path":"rooms/Room_high_res_camera_ui/Room_high_res_camera_ui.yy",},},
     {"roomId":{"name":"Room_low_res_camera_ui","path":"rooms/Room_low_res_camera_ui/Room_low_res_camera_ui.yy",},},
   ],
-  "templateType": null,
   "TextureGroups": [
     {"resourceType":"GMTextureGroup","resourceVersion":"1.3","name":"Default","autocrop":true,"border":2,"compressFormat":"bz2","directory":"","groupParent":null,"isScaled":true,"loadType":"default","mipsToGenerate":0,"targets":-1,},
   ],

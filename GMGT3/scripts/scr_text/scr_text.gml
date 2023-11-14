@@ -17,7 +17,17 @@ function scr_text(_text){
 	}
 	else
 	{
-		snd[page_number] = snd_text_default_mid;
+		switch(global.speaksound)
+		{
+		case 0:
+		snd[page_number] = snd_text_default_bop;
+		break;
+		
+		case 1:
+		snd[page_number] = snd_text_default_low;
+		break;
+		}
+		
 	}
 	page_number++;
 }

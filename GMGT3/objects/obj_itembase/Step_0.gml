@@ -40,8 +40,11 @@ if(mouse_check_button_released(mb_left))
 		}
 	}
 }
+
+
 if(held)
 {
+	
  phy_position_x = mouse_x;
  phy_position_y = mouse_y;
  phy_linear_velocity_x = 0;
@@ -59,6 +62,17 @@ phy_rotation -= 4;
  {
 phy_rotation += 4;	 
  }
+ 
+ if(collision_point(mouse_x,mouse_y,obj_dropzone,true,true))
+	{
+	held = false;	
+	global.MouseHoldsItem = false;
+	var throwspeed = point_distance(pmx,pmy,mouse_x,mouse_y);
+		var throwdir = point_direction(pmx,pmy,mouse_x,mouse_y);
+		
+		phy_linear_velocity_x = lengthdir_x(throwspeed,throwdir)*20;
+		phy_linear_velocity_y = lengthdir_y(throwspeed,throwdir)*20;
+	}	
 }
 mu--;
 if(mu <= 0)
