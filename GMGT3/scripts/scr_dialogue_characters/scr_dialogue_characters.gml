@@ -7,10 +7,10 @@ function scr_dialogue_characters(_name){
 		case "default":
 			speaker_sprite[page_number] = spr_character_default;
 			txtb_spr[page_number] = spr_textbox_default2;
-			txtb_9slice_bottom[page_number] = 2;
+			txtb_9slice_bottom[page_number] = 3;
 			txtb_9slice_top[page_number] = 3;
-			txtb_9slice_left[page_number] = 2;
-			txtb_9slice_right[page_number] = 2;
+			txtb_9slice_left[page_number] = 3;
+			txtb_9slice_right[page_number] = 3;
 			snd[page_number] = snd_text_default_mid;
 			text_spd[page_number] = 1;
 			snd_delay[page_number] = 5;

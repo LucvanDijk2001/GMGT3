@@ -14,6 +14,30 @@ if(mouse_check_button_released(mb_left))
 		phy_linear_velocity_y = lengthdir_y(throwspeed,throwdir)*50;
 		//physics_apply_force()
 		//show_error("throwspeed " + string(throwdir),true);
+		
+		var collided = false;
+		var ccheck = instance_create_layer(x,y,layer,obj_collisionchecker);
+		ccheck.direction = phy_rotation;
+		ccheck.sprite_index = sprite_index;
+		with(ccheck)
+		{
+			if(place_meeting(x,y,obj_creaturebase))
+			{
+				collided = true;
+			}
+			instance_destroy();
+		}
+
+		if(collided)
+		{
+			var deco = instance_create_layer(x,y,"decolayer",obj_decoration);
+			deco.sprite_index = sprite_index;
+			deco.image_angle = phy_rotation*-1;
+			deco.x = x;
+			deco.y = y;
+
+			instance_destroy();
+		}
 	}
 }
 if(held)
@@ -25,15 +49,15 @@ if(held)
  phy_angular_velocity = 0;
  
  var mdir = mouse_wheel_down() - mouse_wheel_up();
- phy_rotation += mdir * 15;
+ phy_rotation += mdir * 25;
  
  if(keyboard_check(ord("A")))
  {
-phy_rotation -= 2;	 
+phy_rotation -= 4;	 
  }
  if(keyboard_check(ord("D")))
  {
-phy_rotation += 2;	 
+phy_rotation += 4;	 
  }
 }
 mu--;
@@ -43,3 +67,4 @@ if(mu <= 0)
 pmx = mouse_x;
 pmy = mouse_y;
 }
+

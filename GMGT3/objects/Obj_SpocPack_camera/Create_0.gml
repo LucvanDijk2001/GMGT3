@@ -1,5 +1,8 @@
 /// @description set camera
 
+var wincol = make_color_rgb(15,0,13);
+window_set_colour(wincol);
+
 //init
 global.SpocPack_camera_init = true;
 
