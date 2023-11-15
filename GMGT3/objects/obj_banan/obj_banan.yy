@@ -13,7 +13,7 @@
     "name": "obj_itembase",
     "path": "objects/obj_itembase/obj_itembase.yy",
   },
-  "persistent": false,
+  "persistent": true,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,
   "physicsFriction": 0.8,
