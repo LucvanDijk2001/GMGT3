@@ -1,5 +1,4 @@
 /// @description Insert description here
 // You can write your code in this editor
-a = 0;
-rm = R_Menu;
-isquit = false;
+s1 = random(360);
+s2 = random(360);

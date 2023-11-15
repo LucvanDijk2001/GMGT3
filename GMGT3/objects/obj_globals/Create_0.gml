@@ -14,4 +14,7 @@ losttimer = 120;
 spawnfade = true;
 global.creaturespeed = 0.4;
 global.spawnmult = 1;
+if(room == R_playertest_luc)
+{
 global.starttextspeed = global.SpocPack_dialogue_default_text_speed;
+}

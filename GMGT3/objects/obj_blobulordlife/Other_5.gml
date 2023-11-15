@@ -1,5 +1,3 @@
 /// @description Insert description here
 // You can write your code in this editor
-a = 0;
-rm = R_Menu;
-isquit = false;
+part_emitter_clear(part_sys,part_emit);

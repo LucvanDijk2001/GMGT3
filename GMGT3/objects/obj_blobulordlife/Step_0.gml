@@ -36,5 +36,6 @@ with(instance_nearest(x,y,obj_blobulordeyesmall))
 {
 instance_destroy();	
 }
+
 instance_destroy();
 }
