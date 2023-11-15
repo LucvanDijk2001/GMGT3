@@ -10,6 +10,8 @@ flipped = false;
 scl = 1;
 hover = false;
 
+audioing = false;
+
 demonic = random(1);
 abyssal = random(1);
 void = random(1);

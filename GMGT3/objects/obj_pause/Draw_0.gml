@@ -71,6 +71,8 @@ if(option == 2){draw_set_color(c_yellow);}
 draw_text_transformed(170,170+30,"Useless button",2,2,sin(b)*5);
 }
 
+if(paused)
+{
 if(option >= 0 && option <= 2)
 {
 	if(keyboard_check_pressed(vk_space) || keyboard_check_pressed(vk_enter) || mouse_check_button_pressed(mb_left))
@@ -90,7 +92,7 @@ if(option >= 0 && option <= 2)
 				paused = false;
 			if(room = R_playertest_luc)
 			{
-			obj_musicHandler.SetVolume(0,0.35);	
+			obj_musicHandler.SetVolume(1,0);
 			instance_create_layer(-10,-10,"pauselayer",obj_fadeout);
 			}
 	
@@ -101,6 +103,6 @@ if(option >= 0 && option <= 2)
 		}
 	}
 }
-
+}
 pmx = mouse_x;
 pmy = mouse_y;

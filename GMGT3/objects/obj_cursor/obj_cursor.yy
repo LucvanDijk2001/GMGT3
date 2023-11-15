@@ -28,7 +28,10 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_mouse",
+    "path": "sprites/spr_mouse/spr_mouse.yy",
+  },
   "spriteMaskId": null,
   "visible": true,
 }
