@@ -1,8 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-timer--;
-if(timer <= 0)
+if(!instance_exists(obj_pause))
 {
-	obj_musicHandler.PlaySong(0);
-room_goto(R_playertest_luc);
+	instance_create_layer(x,y,"pauselayer",obj_pause);	
 }

@@ -2,7 +2,7 @@
 // You can write your code in this editor
 if(!spawnItems)
 {
-	if(instance_number(obj_itembase) < 50 && !instance_exists(Obj_itemSpawn))
+	if(instance_number(obj_itembase) < 60 && !instance_exists(Obj_itemSpawn))
 	{
 	 spawnItems = true;	
 	 itemsToSpawn = itemSpawns;
