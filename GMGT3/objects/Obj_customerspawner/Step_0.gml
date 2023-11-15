@@ -68,31 +68,31 @@ if(customerTimer <= 0)
 		 case 0:
 			var w1s = 11;
 			var w2s = w1s+w1l+73;//71
-			scr_text("Here is my "+w1+". It looks too regular, please apply some Globulord magic to make it look " + w2 + "!");
+			scr_text("HERE IS MY "+w1+". IT LOOKS TOO REGULAR, PLEASE APPLY SOME GLOBULORD MAGIC TO MAKE IT LOOK " + w2 + "!");
 		 break;
 		 
 		 case 1:
 			var w1s = 8;
 			var w2s = w1s+w1l+21;//71
-			scr_text("UGH! MY "+w1+" needs to be way more "+w2+"! Go fix it for me Globulord!");
+			scr_text("UGH! MY "+w1+" NEEDS TO BE WAY MORE "+w2+"! GO FIX IT FOR ME GLOBULORD!");
 		 break;
 		 
 		 case 2:
 			var w1s = 20;
 			var w2s = w1s+w1l+25;//71
-			scr_text("I HATE the way this "+w1+" looks! he doesn't fit my "+w2+" vibe at all! Globulord fixes?");
+			scr_text("I HATE THE WAY THIS "+w1+" LOOKS! HE DOESN'T FIT MY "+w2+" VIBE AT ALL! GLOBULORD FIXES?");
 		 break;
 		 
 		 case 3:
 			var w1s = 31;
 			var w2s = w1s+w1l+34;//71
-			scr_text("Help me oh great Globulord! My "+w1+" needs to be revamped to look more "+w2+"!");
+			scr_text("HELP ME OH GREAT GLOBULORD! MY "+w1+" NEEDS TO BE REVAMPED TO LOOK MORE "+w2+"!");
 		 break;
 		 
 		 case 4:
-			var w1s = 41;
+			var w1s = 37;
 			var w2s = w1s+w1l+7;//71
-			scr_text("I ****** LOVE GLOBULORD! **** CAN ****** "+w1+"! ***** "+w2+"! I LOOOOOVE GLOB!");
+			scr_text("I *$&@($ LOVE GLOBULORD! **%& @#$%^& "+w1+"! ((*%& "+w2+"! I LOOOOOVE GLOB!");
 		 break;
 		}
 		scr_text_color(w1s,w1s+w1l,c_yellow,c_yellow,c_yellow,c_yellow);

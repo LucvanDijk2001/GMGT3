@@ -28,7 +28,7 @@
   "physicsShape": 0,
   "physicsShapePoints": [
     {"x":6.0,"y":6.0,},
-    {"x":5.0,"y":6.0,},
+    {"x":7.0,"y":6.0,},
   ],
   "physicsStartAwake": true,
   "properties": [],

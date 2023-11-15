@@ -23,7 +23,7 @@ badass = 0;
 creepy = 0;
 mutant = 0;
 
-global.creaturespeed += 0.02;
+global.creaturespeed += 0.01;
 
 x = -60;
 y = 165;
