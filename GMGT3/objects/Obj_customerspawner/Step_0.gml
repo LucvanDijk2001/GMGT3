@@ -31,6 +31,13 @@ if(customerTimer <= 0)
 		animals[0] = "DUCK";
 		animals[1] = "CAMEL";
 		animals[2] = "GOAT";
+		animals[3] = "TURTLE";
+		animals[4] = "LION";
+		animals[5] = "PENGUIN";
+		animals[6] = "RHINO";
+		animals[7] = "CAT";
+		animals[8] = "DOG";
+		animals[9] = "FISH";
 		
 		var types;
 		types[0] = "DEMONIC";
@@ -40,7 +47,7 @@ if(customerTimer <= 0)
 		types[4] = "CREEPY";
 		types[5] = "MUTANT";
 		
-		var r1 = irandom(2);
+		var r1 = irandom(9);
 		var r2 = irandom(5);
 		
 		var c = c_yellow;

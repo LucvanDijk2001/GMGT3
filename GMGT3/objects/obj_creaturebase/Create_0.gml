@@ -22,6 +22,7 @@ void = 0;
 badass = 0;
 creepy = 0;
 mutant = 0;
+scored = false;
 
 global.creaturespeed += 0.01;
 

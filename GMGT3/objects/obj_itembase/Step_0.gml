@@ -58,6 +58,21 @@ if(mouse_check_button_released(mb_left))
 			}
 			deco.paren = self;
 			
+			var randsound = irandom(2);
+			switch(randsound){
+				case 0:
+				audio_play_sound(snd_put1, 1, false);
+				break;
+				
+				case 1:
+				audio_play_sound(snd_put2, 1, false);
+				break;
+				
+				case 2:
+				audio_play_sound(snd_put3, 1, false);
+				break;
+			}
+			
 			deco.paren = cre;
 			deco.offx = deco.paren.x-x;
             deco.offy = deco.paren.y-y;
@@ -70,6 +85,9 @@ if(mouse_check_button_released(mb_left))
 			array_push(cre.decos,deco);
 			cre.addDeco(deco);
 			instance_destroy();
+		}
+		else{
+			audio_play_sound(snd_toss, 1, false);
 		}
 	}
 }
