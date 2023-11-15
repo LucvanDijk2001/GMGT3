@@ -75,8 +75,18 @@ if(mouse_check_button_released(mb_left))
 }
 
 
+if(mouse_check_button_pressed(mb_right))
+{
+	if(held)
+	{
+		flipped = !flipped;
+		image_xscale *= -1;	
+	}
+}
+
 if(held)
 {
+
 scl = 1.2;
  phy_position_x = mouse_x;
  phy_position_y = mouse_y;

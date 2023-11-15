@@ -1,7 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-if(held)
+if(global.lost)
 {
-	flipped = !flipped;
-	image_xscale *= -1;	
+image_speed = 0;	
 }

@@ -2,7 +2,7 @@
 // You can write your code in this editor
 
 
-if(!global.MouseHoldsItem)
+if(!global.MouseHoldsItem && !global.lost)
 {
 	 if(!collision_point(mouse_x,mouse_y,obj_dropzone,true,true))
 	 {

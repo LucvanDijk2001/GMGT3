@@ -1,5 +1,10 @@
 /// @description Insert description here
 // You can write your code in this editor
+lost = false;
+lspd = random_range(0.5,2);
+lostdir = random(360);
+
+
 xoff = 0;
 yoff = 0;
 irislenmin = 1;

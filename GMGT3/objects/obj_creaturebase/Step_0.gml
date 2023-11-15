@@ -1,6 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
+if(!global.lost)
+{
 x+=global.creaturespeed;
+}
 
 if(x > 430)
 {

@@ -1,4 +1,6 @@
 /// @description 
+if(!global.lost)
+{
 if collision_point(mouse_x, mouse_y, parent, false, true) and mouse_check_button(mb_left){
 	arm_move_towards(mouse_x-lengthdir_x(12, seg_get_angle(2)-flip_*45), mouse_y-lengthdir_y(9, seg_get_angle(2)-flip_*45), grab_speed);
 	hand_is_grab = 1;
@@ -36,3 +38,9 @@ if randomy >= parent.y + 50 or randomy <= parent.y - 50 or randomy >= room_heigh
 	randomvely = randomvely * -1;
 	}
 randomy = clamp(randomy, parent.y - 50, parent.y + 50);
+}
+else
+{
+	piny += 5;
+arm_relocate(pinx,piny)	
+}

@@ -2,7 +2,7 @@
 // You can write your code in this editor
 xoff = 0;
 yoff = 0;
-
+rotto = 0;
 size = random_range(0.8,1.3);
 
 

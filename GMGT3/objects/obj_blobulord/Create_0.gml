@@ -35,5 +35,8 @@ part_type_life(part,2*30,4*30);
 
 part_emitter_stream(part_sys,part_emit,part,radius*(1/3));
 
+lspd = random_range(1,3);
+lostdir = random(360);
+
 
 
