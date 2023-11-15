@@ -35,12 +35,16 @@ if(x > 430)
 	
 	if(pass)
 	{
-		global.score += 100;
+		var sb = instance_create_layer(x,y,"Itemspawnlayer",obj_scoreblob);
+		sb.scr = 100;
 	}
 	if(!pass)
 	{
-		global.score -= 100;
-		global.score = clamp(global.score,0,10000000);
+		if(instance_exists(obj_blobulordlife))
+		{
+		var sb = instance_create_layer(x,y,"Itemspawnlayer",obj_lifeblob);
+		}
+		//global.score = clamp(global.score,0,10000000);
 	}
 	
 	array_push(global.createdAnimals,anim);

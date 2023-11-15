@@ -1,3 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
-draw_self();
+timer--;
+if(timer <= 0)
+{
+	
+room_goto(R_playertest_luc);
+}

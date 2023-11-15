@@ -115,3 +115,32 @@ pmx = mouse_x;
 pmy = mouse_y;
 }
 
+
+if(phytimer <= 0)
+{
+	if(!phy_active)
+	{
+		phy_active = true;	
+		if(left)
+		{
+			var dir = random_range(30,50);
+			var vel = random_range(270,370);
+			phy_linear_velocity_x = lengthdir_x(vel,dir);
+			phy_linear_velocity_y = lengthdir_y(vel,dir);
+		}
+		else
+		{
+			var dir = random_range(130,150);
+			var vel = random_range(270,370);
+			phy_linear_velocity_x = lengthdir_x(vel,dir);
+			phy_linear_velocity_y = lengthdir_y(vel,dir);
+		}
+	}
+}
+else
+{
+	phytimer--;
+	phy_position_x += (movetox - phy_position_x)/8;
+	phy_position_y += (movetoy - phy_position_y)/8;
+}
+

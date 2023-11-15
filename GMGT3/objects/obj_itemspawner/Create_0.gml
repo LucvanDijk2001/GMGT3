@@ -4,4 +4,4 @@ spawnItems = true;
 spawnTime = 8;
 spawnTimer = spawnTime;
 itemSpawns = 25;
-itemsToSpawn = itemSpawns;
+itemsToSpawn = 50;

@@ -2,7 +2,7 @@
 // You can write your code in this editor
 if(!spawnItems)
 {
-	if(instance_number(obj_itembase) < 10 && !instance_exists(Obj_itemSpawn))
+	if(instance_number(obj_itembase) < 25 && !instance_exists(Obj_itemSpawn))
 	{
 	 spawnItems = true;	
 	 itemsToSpawn = itemSpawns;
@@ -18,7 +18,11 @@ if(spawnItems)
 		{
 			itemsToSpawn--;
 			spawnTimer += spawnTime;
-			instance_create_layer(random_range(10,330),random_range(10,160),"Itemspawnlayer",Obj_itemSpawn);
+			instance_create_layer(-40,370,"Instances",choose(
+			obj_shoe,
+			obj_banan,
+			obj_glasses
+			));
 		}
 	}
 	else

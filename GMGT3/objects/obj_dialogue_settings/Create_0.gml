@@ -13,12 +13,12 @@ global.SpocPack_dialogue_background_9slice_right  = 4;				     //9slice slice po
 global.SpocPack_dialogue_accept_key               = vk_space;            //dialogue continue key
 
 //positioning
-global.SpocPack_textbox_width  = 256; //width of textbox
+global.SpocPack_textbox_width  = 208; //width of textbox
 global.SpocPack_textbox_height = 48;  //height of textbox
 global.SpocPack_textbox_y      = 6;  //textbox position y
 global.SpocPack_textbox_x      = 30;   //textbox position x (doesn't really get used cause of the offsets)
 
-global.SpocPack_textbox_option_spacing = 15; //y distance between dialogue option boxes
+global.SpocPack_textbox_option_spacing =  0; //y distance between dialogue option boxes
 global.SpocPack_textbox_option_border_x = 4; //text padding x for option boxes
 global.SpocPack_textbox_option_border_y = 5; //text padding y for option boxes
 
