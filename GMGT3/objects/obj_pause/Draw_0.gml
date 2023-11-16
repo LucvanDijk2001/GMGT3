@@ -5,7 +5,7 @@
 if(paused)
 {
 	
-
+draw_set_font(global.SpocPack_font_main);
 
 if(pmx != mouse_x || pmy!= mouse_y)
 {
@@ -14,15 +14,27 @@ if(pmx != mouse_x || pmy!= mouse_y)
 		var spc = 10;
 		if (mouse_y > 170-30-spc && mouse_y < 170-30+spc)
 		{
+			if(option != 0)
+			{
 			option = 0;	
+			audio_play_sound(snd_put1,1,0);
+			}
 		}
 		if (mouse_y > 170-spc && mouse_y < 170+spc)
 		{
+			if(option != 1)
+			{
 			option = 1;	
+			audio_play_sound(snd_put1,1,0);
+			}
 		}
 		if (mouse_y > 170+30-spc && mouse_y < 170+30+spc)
 		{
+			if(option != 2)
+			{
 			option = 2;	
+			audio_play_sound(snd_put1,1,0);
+			}	
 		}
 	}
 	else
@@ -35,12 +47,14 @@ else
 	if(keyboard_check_pressed(vk_up) || keyboard_check_pressed(ord("W")))
 {
 	option--;
+	audio_play_sound(snd_put1,1,0);
 optionchanged = true;
 }
 if(keyboard_check_pressed(vk_down) || keyboard_check_pressed(ord("S")))
 {
 	option++;
 optionchanged = true;
+audio_play_sound(snd_put1,1,0);
 }	
 if(optionchanged)
 {
@@ -77,23 +91,26 @@ if(option >= 0 && option <= 2)
 {
 	if(keyboard_check_pressed(vk_space) || keyboard_check_pressed(vk_enter) || mouse_check_button_pressed(mb_left))
 	{
+		audio_play_sound(snd_put2,1,0);
 		if(option == 0)
 		{
 			instance_activate_all();
 			paused = false;
-			if(room = R_playertest_luc)
+			if(room = R_playertest_luc || room == R_creative)
 			{
-			obj_musicHandler.SetVolume(0,0.35);	
+			obj_musicHandler.SetVolume(0,0.35);
+			obj_musicHandler.SetVolume(1,0.00);
 			}
 		}
 		if(option == 1)
 		{
 			instance_activate_all();
 				paused = false;
-			if(room = R_playertest_luc)
+			if(room = R_playertest_luc || room == R_creative)
 			{
 			obj_musicHandler.SetVolume(1,0);
-			instance_create_layer(-10,-10,"pauselayer",obj_fadeout);
+			var fd = instance_create_layer(-10,-10,"pauselayer",obj_fadeout);
+			fd.rm = R_Menu;
 			}
 	
 		}

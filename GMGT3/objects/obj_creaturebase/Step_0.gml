@@ -2,7 +2,10 @@
 // You can write your code in this editor
 if(!global.lost)
 {
+	if(room == R_playertest_luc)
+	{
 x+=global.creaturespeed;
+	}
 }
 
 if(x > 415)

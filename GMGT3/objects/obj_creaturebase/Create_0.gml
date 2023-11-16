@@ -26,5 +26,8 @@ scored = false;
 
 global.creaturespeed += 0.01;
 
+if(room == R_playertest_luc)
+{
 x = -60;
 y = 165;
+}

@@ -9,7 +9,10 @@ if(a >= 0.99)
 		{
 		obj_musicHandler.SetVolume(0,0);
 		}
-	
+		if(rm == R_Endscreen)
+		{
+			obj_musicHandler.PlaySong(2);
+		}
 		room_goto(rm);
 	}
 	else

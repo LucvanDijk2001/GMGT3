@@ -1,5 +1,15 @@
 /// @description Insert description here
 // You can write your code in this editor
+if(hover)
+{
+scllto = 1.2;	
+scll = 1.2;
+}
+else
+{
+	scllto = 1;
+}
+scll += (scllto-scll)/8;
 if(mouse_check_button_released(mb_left))
 {
 	if(held)
@@ -7,6 +17,7 @@ if(mouse_check_button_released(mb_left))
 		scl = 1;
 		global.MouseHoldsItem = false;
 		held = false;	
+		hover = false;
 		
 		var throwspeed = point_distance(pmx,pmy,mouse_x,mouse_y);
 		var throwdir = point_direction(pmx,pmy,mouse_x,mouse_y);
@@ -84,7 +95,10 @@ if(mouse_check_button_released(mb_left))
 			cre.mutant += mutant;
 			array_push(cre.decos,deco);
 			cre.addDeco(deco);
+			if(room == R_playertest_luc)
+			{
 			instance_destroy();
+			}
 		}
 		else{
 			audio_play_sound(snd_toss, 1, false);

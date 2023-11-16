@@ -11,6 +11,8 @@ scl = 1;
 hover = false;
 
 audioing = false;
+scll = 1;
+scllto = 1;
 
 demonic = random(1);
 abyssal = random(1);

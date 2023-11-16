@@ -5,3 +5,5 @@ spawnTime = 3;
 spawnTimer = spawnTime;
 itemSpawns = 10;
 itemsToSpawn = 70;
+
+createditems = false;

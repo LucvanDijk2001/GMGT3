@@ -4,9 +4,20 @@ randomize();
 global.placeDepth = 10;
 global.speaksound = 0;
 
+if(!variable_global_exists("createdAnimals"))
+{
 global.createdAnimals = array_create();
+}
+if(!variable_global_exists("score"))
+{
 global.score = 0;
+}
+else if (room == R_playertest_luc)
+{
+	global.score = 0;	
+}
 
+global.holdingbutton = false;
 a = 0;
 global.lost = false;
 losttimer = 120;

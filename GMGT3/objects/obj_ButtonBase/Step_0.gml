@@ -4,6 +4,7 @@ if(mouse_check_button_released(mb_left))
 {
 	if(held)
 	{
+		global.holdingbutton = false;
 		scl = 1;
 		global.MouseHoldsItem = false;
 		held = false;	
@@ -29,7 +30,7 @@ if(mouse_check_button_released(mb_left))
 			instance_destroy();
 		}
 
-		if(!flipped && abs(phy_rotation%360) < 30 && abs(phy_rotation%360) > -30)
+		if(!flipped && abs(phy_rotation%360) < 30 && abs(phy_rotation%360) > -30||!flipped && abs(phy_rotation%360) > 330)
 		{
 		if(collided)
 		{
@@ -38,6 +39,11 @@ if(mouse_check_button_released(mb_left))
 			phy_rotation = 0;
 			phy_position_x = obj_buttonSlot.x;
 			phy_position_y = obj_buttonSlot.y;
+			audio_play_sound(snd_casette,1,0);
+		}
+		else
+		{
+		audio_play_sound(snd_toss, 1, false);	
 		}
 		}
 	}

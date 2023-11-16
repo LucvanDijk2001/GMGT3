@@ -1,5 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
+if(room == R_playertest_luc)
+{
 if(!spawnItems)
 {
 	if(instance_number(obj_itembase) < 60 && !instance_exists(Obj_itemSpawn))
@@ -55,5 +57,73 @@ if(spawnItems)
 	else
 	{
 	spawnItems = false;	
+	}
+}
+}
+else
+{
+	if(!createditems)
+	{
+		createditems = true;
+		instance_create_layer(-40,370,"Instances",obj_whitehorn);
+		instance_create_layer(-40,370,"Instances",obj_voidmouth);
+		instance_create_layer(-40,370,"Instances",obj_voidholes);
+		instance_create_layer(-40,370,"Instances",obj_voidhole);
+		instance_create_layer(-40,370,"Instances",obj_thorns);
+		instance_create_layer(-40,370,"Instances",obj_tentacle);
+		instance_create_layer(-40,370,"Instances",obj_tendrileye);
+		instance_create_layer(-40,370,"Instances",obj_stretcheye);
+		instance_create_layer(-40,370,"Instances",obj_spikecap);
+		instance_create_layer(-40,370,"Instances",obj_spike);
+		instance_create_layer(-40,370,"Instances",obj_skateboard);
+		instance_create_layer(-40,370,"Instances",obj_shades);
+		instance_create_layer(-40,370,"Instances",obj_pus);
+		instance_create_layer(-40,370,"Instances",obj_pumpkin);
+		instance_create_layer(-40,370,"Instances",obj_peereyes);
+		instance_create_layer(-40,370,"Instances",obj_mandibles);
+		instance_create_layer(-40,370,"Instances",obj_mutantarm);
+		instance_create_layer(-40,370,"Instances",obj_joy);
+		instance_create_layer(-40,370,"Instances",obj_guhmouth);
+		instance_create_layer(-40,370,"Instances",obj_gaper);
+		instance_create_layer(-40,370,"Instances",obj_fin);
+		instance_create_layer(-40,370,"Instances",obj_demonthorn);
+		instance_create_layer(-40,370,"Instances",obj_demontail);
+		instance_create_layer(-40,370,"Instances",obj_demonfeet);
+		instance_create_layer(-40,370,"Instances",obj_demoneye);
+		instance_create_layer(-40,370,"Instances",obj_bugeye);
+		instance_create_layer(-40,370,"Instances",obj_boots);
+		instance_create_layer(-40,370,"Instances",obj_bloodeye);
+		instance_create_layer(-40,370,"Instances",obj_beastmouth);
+		instance_create_layer(-40,370,"Instances",obj_anglerteeth);
+		instance_create_layer(-40,370,"Instances",obj_whitehorn);
+		instance_create_layer(-40,370,"Instances",obj_voidmouth);
+		instance_create_layer(-40,370,"Instances",obj_voidholes);
+		instance_create_layer(-40,370,"Instances",obj_voidhole);
+		instance_create_layer(-40,370,"Instances",obj_thorns);
+		instance_create_layer(-40,370,"Instances",obj_tentacle);
+		instance_create_layer(-40,370,"Instances",obj_tendrileye);
+		instance_create_layer(-40,370,"Instances",obj_stretcheye);
+		instance_create_layer(-40,370,"Instances",obj_spikecap);
+		instance_create_layer(-40,370,"Instances",obj_spike);
+		instance_create_layer(-40,370,"Instances",obj_skateboard);
+		instance_create_layer(-40,370,"Instances",obj_shades);
+		instance_create_layer(-40,370,"Instances",obj_pus);
+		instance_create_layer(-40,370,"Instances",obj_pumpkin);
+		instance_create_layer(-40,370,"Instances",obj_peereyes);
+		instance_create_layer(-40,370,"Instances",obj_mandibles);
+		instance_create_layer(-40,370,"Instances",obj_mutantarm);
+		instance_create_layer(-40,370,"Instances",obj_joy);
+		instance_create_layer(-40,370,"Instances",obj_guhmouth);
+		instance_create_layer(-40,370,"Instances",obj_gaper);
+		instance_create_layer(-40,370,"Instances",obj_fin);
+		instance_create_layer(-40,370,"Instances",obj_demonthorn);
+		instance_create_layer(-40,370,"Instances",obj_demontail);
+		instance_create_layer(-40,370,"Instances",obj_demonfeet);
+		instance_create_layer(-40,370,"Instances",obj_demoneye);
+		instance_create_layer(-40,370,"Instances",obj_bugeye);
+		instance_create_layer(-40,370,"Instances",obj_boots);
+		instance_create_layer(-40,370,"Instances",obj_bloodeye);
+		instance_create_layer(-40,370,"Instances",obj_beastmouth);
+		instance_create_layer(-40,370,"Instances",obj_anglerteeth);
 	}
 }

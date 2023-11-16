@@ -34,8 +34,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_menubutton_start",
-    "path": "sprites/spr_menubutton_start/spr_menubutton_start.yy",
+    "name": "spr_menubutton_again",
+    "path": "sprites/spr_menubutton_again/spr_menubutton_again.yy",
   },
   "spriteMaskId": null,
   "visible": true,
